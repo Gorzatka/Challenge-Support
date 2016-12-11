@@ -1,0 +1,26 @@
+{% extends 'challange_support_app/base.html' %}
+
+    {% block content %}
+        <div class = "page-body">
+            {% if challenge.published_date %}
+                <p>{{challenge.published_date}}</p>
+            {% endif %}
+            <a class="btn btn-default" href="{% url 'edit_challenge' pk=challenge.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <br>
+            <h1> {{challenge.title}}</h1>
+            <br>
+            <p> {{challenge.description|linebreaksbr}}</p>
+            <p></p>
+            <p> Status: {{challenge.challenge_status|linebreaksbr}}</p>
+            <p> Duration: {{challenge.challenge_end_date|timeuntil:challenge.challenge_start_date}}</p>
+            {% if challenge_start_date > challenge_current_date %}
+                <p> Challenge haven't started yet.</p>
+            {% elif challenge_end_date < challenge_current_date %}
+                <p> Challenge is already closed.</p>
+            {% else %}
+                <p> Time left: {{challenge.challenge_end_date|timeuntil:challenge.challenge_current_date}}</p>
+                <p> Time passed: {{challenge.challenge_start_date|timesince:challenge.challenge_current_date}}</p>
+            {% endif %}
+
+        </div>
+    {% endblock %}

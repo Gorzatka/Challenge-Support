@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/challanges.css' %}">
+    <meta charset="UTF-8">
+    <title>Challenge List</title>
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="{% url 'challenge_list' %}">Challenge Support App</a></h1>
+        </div>
+        <div id="menu">
+            {% if user.is_authenticated %}
+                <p><a href="{% url 'new_challenge' %}">Create Challenge</a></p>
+            {% endif %}
+            <p><a href="{% url 'challenge_list' %}">View My Challenges</a></p>
+            <p><a href="{% url 'complete_challenges'%}">Complete Challenges</a></p>
+            <p><a href="{% url 'story_list' %}">Share Your Story</a></p>
+            <p>Support</p>
+            <p>Log In</p>
+            <p>About Me</p>
+        </div>
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

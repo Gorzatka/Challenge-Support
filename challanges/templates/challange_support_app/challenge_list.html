@@ -1,0 +1,11 @@
+{% extends 'challange_support_app/base.html' %}
+
+{% block content %}
+    {% for challenge in challenges %}
+        <div class="page-body">
+            <p>{{ challenge.published_date }}</p>
+            <h1><a href="{% url 'challenge_detail' pk=challenge.pk %}">{{challenge.title}}</a></h1>
+            <p>{{ challenge.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

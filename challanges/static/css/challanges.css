@@ -1,0 +1,55 @@
+h1 a {
+    color: #cc1111;
+    margin: 0px;
+    font-size: 36px;
+}
+.page-body {
+    padding: 15px;
+    background-image: url("http://orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg");
+    margin-left: 0px;
+    boarder-top: 2px solid black;
+}
+.page-header {
+    background-image: url("http://www.psdgraphics.com/wp-content/uploads/2009/10/blue-sky.jpg");
+    background-repeat: repeat-x
+    font-family: Impact;
+    padding: 50px;
+    margin: 0px;
+    border-bottom: 2px solid black;
+
+}
+
+.page-footer {
+     background-image: url("http://cdn.paper4pc.com/images/single-poppy-wallpaper-1.jpg");
+    padding: 50px;
+    border-top: 2px solid black;
+    position: fixed;
+}
+h1 {
+    color: #CC3434;
+    font-family: Impact;
+    margin: 0px;
+    font-size: 20px;
+}
+p {
+    margin: 0px;
+    font-family: Courier;
+}
+
+#menu p {
+    height: 30px;
+    width: 170px;
+    display: inline-block;
+    padding: 10px;
+    float: left;
+    margin: 5px;
+    font-family: Impact;
+    font-size: 16px;
+    clear: left;
+
+}
+
+#story_list p {
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/08/06/48/journal-1577764_960_720.png");
+
+}

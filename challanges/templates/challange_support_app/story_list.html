@@ -1,0 +1,11 @@
+{% extends 'challange_support_app/base.html' %}
+
+{% block content %}
+    {% for story in story %}
+        <div class="page-body">
+            <p>{{ story.published_date }}</p>
+            <h1><a href="{% url 'story_list' pk=story.pk %}">{{story.title}}</a></h1>
+            <p>{{ story.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
